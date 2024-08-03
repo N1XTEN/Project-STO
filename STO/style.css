@@ -1,0 +1,268 @@
+@font-face {
+  font-family: 'GTA';
+  src: url('./fonts/GTA\ Russian.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1em 0;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'GTA', sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'GTA', sans-serif;
+}
+
+.hero {
+  background: url('hero.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 3em 0;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+}
+
+.hero p {
+  margin: 1em 0;
+  font-size: 1.2em;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #ff4500;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.services {
+  background: #fff;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.service-item {
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 1.5em;
+  margin: 0.5em;
+  flex: 0 1 45%;
+  max-width: 45%;
+}
+
+.service-item h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.service-item p {
+  font-size: 1em;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  margin-top: 2em;
+}
+
+/* Стили для логотипа */
+.mainLogo {
+  /* Убедитесь, что контейнер имеет относительное позиционирование */
+  position: relative;
+  /* Выравнивание контейнера по центру (опционально) */
+  text-align: center;
+}
+
+/* Стили для изображения */
+.mainLogo img {
+  width: 456px;
+  height: 141px;
+}
+
+.Logo img {
+  width: 240px;
+  height: 199px;
+
+  /* Позиционирование второго изображения */
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Общие стили для модального окна */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.is-open {
+  display: flex;
+}
+
+.modal [role="dialog"] {
+  background: white;
+  padding: 1em;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для заголовка и кнопок */
+.modal header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.modal button {
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Стили для формы внутри модального окна */
+.modal-form {
+  
+  flex-direction: column;
+}
+
+#contact-form {
+  
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 0.5em 1em;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+
+
+.hidden {
+  display: none;
+}
