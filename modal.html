@@ -30,10 +30,7 @@
                 <label for="last-name">Фамилия:</label>
                 <input type="text" id="last-name" name="last-name" required>
               </div>
-              <div class="form-group">
-                <label for="phone-number">Номер телефона:</label>
-                <input type="tel" id="phone-number" name="phone-number" required pattern="\+\d{7-15}" title="Введите номер телефона в формате +0 000 0000">
-              </div>
+              
               <button type="submit">Отправить</button>
             </form>
           </div>
@@ -45,6 +42,7 @@
   <!-- Подключение библиотеки MicroModal -->
   <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
   <!-- Подключение файла main.js -->
-  <script src="modal.js"></script>
+  <script src="modal.js" defer></script>
+
 </body>
 </html>

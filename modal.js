@@ -28,16 +28,26 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     event.preventDefault(); // Предотвращаем отправку формы по умолчанию
 
     // Получаем значения полей формы
-    var firstName = document.getElementById('first-name').value;
-    var lastName = document.getElementById('last-name').value;
-    var phoneNumber = document.getElementById('phone-number').value;
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    
 
-    // Формируем массив с данными
-    var formData = [firstName, lastName, phoneNumber];
+    // Формируем объект с данными
+    const formData = {
+        firstName: firstName,
+        lastName: lastName
+       
+    };
 
-    // Выводим массив в консоль (или можно использовать его дальше по вашему усмотрению)
-    console.log(formData);
-
-    // Закрываем модальное окно после отправки
-    MicroModal.close('modal-1');
+    // Отправка данных на сервер
+    fetch('http://localhost:3000/submit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => response.text())
+    .then(data => console.log('Success:', data))
+    .catch((error) => console.error('Error:', error));
 });
